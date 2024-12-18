@@ -1,19 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration.ts";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(<App />);
 
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("/service-worker.js")
-      .then((registration) => {
-        console.log("ServiceWorker registration successful");
-      })
-      .catch((err) => {
-        console.log("ServiceWorker registration failed: ", err);
-      });
-  });
-}
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below
+serviceWorkerRegistration.register();
