@@ -6,10 +6,14 @@
       "use": "@vercel/static-build",
       "config": {
         "distDir": "build",
-        "buildCommand": "NODE_ENV=production npm run build"
+        "buildCommand": "NODE_ENV=production CI=false npm run build"
       }
     }
   ],
+  "env": {
+    "NODE_ENV": "production",
+    "PUBLIC_URL": "/"
+  },
   "routes": [
     {
       "src": "/static/(.*)",
