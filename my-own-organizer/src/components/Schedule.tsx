@@ -3,7 +3,7 @@ import { addDays, format, startOfWeek, isSameDay } from "date-fns";
 import {
   processCalendarImage,
   CalendarEvent,
-} from "../utils/calendarImageProcessor";
+} from "../utils/calendarImageProcessor.ts";
 
 interface TimeSlot {
   day: Date;
