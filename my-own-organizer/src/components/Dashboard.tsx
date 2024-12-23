@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import TaskView from "./TaskView.tsx";
+import TaskView from "../TaskView.tsx";
+import Schedule from "./Schedule.tsx";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("schedule");
@@ -39,8 +40,8 @@ const Dashboard = () => {
         {activeTab === "schedule" && (
           <div className="bg-white rounded-lg shadow p-4">
             <h2 className="text-xl font-semibold mb-4">Daily Schedule</h2>
-            <div className="h-96 flex items-center justify-center text-gray-500">
-              Schedule View Coming Soon
+            <div className="flex-1">
+              <Schedule />
             </div>
           </div>
         )}
